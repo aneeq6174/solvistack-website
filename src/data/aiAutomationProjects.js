@@ -1,0 +1,58 @@
+export const AI_AUTOMATION_PROJECTS = [
+  {
+    id: 'lead-qualification',
+    title: 'AI-Powered Lead Qualification & CRM Automation',
+    description: 'Automated scoring and routing of inbound leads using criteria and behavior. Qualified leads are pushed to HubSpot with the right owner and follow-up sequence.',
+    technologies: ['OpenAI', 'Zapier', 'HubSpot', 'REST APIs'],
+    impact: 'Faster response to hot leads; sales team focuses on high-intent contacts.',
+  },
+  {
+    id: 'client-onboarding',
+    title: 'Automated Client Onboarding & Document Processing',
+    description: 'End-to-end onboarding flows that collect documents, validate data, and update internal systems. Reduces manual data entry and ensures nothing is missed.',
+    technologies: ['Node.js', 'Zapier', 'Make', 'PDF/OCR APIs'],
+    impact: 'Onboarding time cut by half; fewer errors and rework.',
+  },
+  {
+    id: 'rag-chatbot',
+    title: 'AI Chatbot with Business Knowledge Base',
+    description: 'RAG-based assistant that answers from your docs and policies. Deployed for internal use or customer-facing support with controlled, cited answers.',
+    technologies: ['OpenAI', 'LangChain', 'Vector DB', 'Node.js'],
+    impact: 'Instant answers from company knowledge; lower support load.',
+  },
+  {
+    id: 'sales-pipeline',
+    title: 'Sales Pipeline Automation with Predictive Follow-ups',
+    description: 'Pipeline stages and activity triggers automated follow-up tasks and reminders. Optional scoring helps prioritize which deals need attention.',
+    technologies: ['Zapier', 'Make', 'CRM APIs', 'OpenAI'],
+    impact: 'Fewer dropped leads; consistent follow-up without manual tracking.',
+  },
+  {
+    id: 'workflow-optimization',
+    title: 'AI Workflow Optimization for Operations Teams',
+    description: 'Analysis of existing workflows with recommendations for automation and batching. Implementation via no-code and custom integrations.',
+    technologies: ['n8n', 'Make', 'Python', 'REST APIs'],
+    impact: 'Identified and automated repetitive tasks; hours saved per week.',
+  },
+  {
+    id: 'proposal-report-gen',
+    title: 'Automated Proposal & Report Generation',
+    description: 'Templates fed with deal or project data to produce first-draft proposals and reports. Reduces manual drafting while keeping branding and structure consistent.',
+    technologies: ['OpenAI', 'Node.js', 'Templates', 'APIs'],
+    impact: 'Faster proposal turnaround; consistent quality and formatting.',
+  },
+  {
+    id: 'support-triage',
+    title: 'AI-Based Customer Support Ticket Triage',
+    description: 'Incoming tickets are classified, prioritized, and routed by intent and urgency. High-impact or sensitive cases are escalated; the rest are auto-assigned.',
+    technologies: ['OpenAI', 'Zapier', 'Helpdesk APIs', 'Node.js'],
+    impact: 'Faster resolution for urgent cases; balanced workload across agents.',
+  },
+  {
+    id: 'internal-assistants',
+    title: 'Internal AI Assistants for Companies',
+    description: 'Custom-trained or fine-tuned assistants for internal use: process docs, answer policy questions, or guide staff through procedures using your data.',
+    technologies: ['OpenAI', 'LangChain', 'Python', 'RAG'],
+    impact: 'Faster access to internal knowledge; less time searching and asking around.',
+  },
+]
