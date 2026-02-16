@@ -34,7 +34,7 @@ export function Footer() {
             {/* Column 1: Logo + Tagline */}
             <div className="footer-column">
               <Link to="/" className="footer-logo">
-                <img src="/Solvistack_logo.png" alt="SolviStack Technologies" />
+                <img src="/Solvisatck_Dark_logo.png" alt="SolviStack Technologies" />
               </Link>
               <p className="footer-tagline">
                 Automation-first software house building intelligent systems and web applications for scaling businesses.
