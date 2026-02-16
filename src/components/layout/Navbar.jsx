@@ -75,7 +75,7 @@ export function Navbar() {
             aria-label="SolviStack Home"
           >
             <img
-              src="/logo.png"
+              src="/Solvistack_logo.png"
               alt="SolviStack Technologies"
               className="nav-logo-img"
               onError={(e) => {
