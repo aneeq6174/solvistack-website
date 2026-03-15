@@ -1,9 +1,10 @@
 import { Hero } from '../components/sections/Hero'
+import { Problem } from '../components/sections/Problem'
 import { Services } from '../components/sections/Services'
 import { AutomationProjects } from '../components/sections/AutomationProjects'
 import { AutomationFlow } from '../components/sections/AutomationFlow'
 import { FeaturedWork } from '../components/sections/FeaturedWork'
-import { Partners } from '../components/sections/Partners'
+
 import { Testimonials } from '../components/sections/Testimonials'
 import { Process } from '../components/sections/Process'
 import { TechStack } from '../components/sections/TechStack'
@@ -13,11 +14,12 @@ export function HomePage() {
   return (
     <main>
       <Hero />
+      <Problem />
       <Services />
       <AutomationProjects />
       <AutomationFlow />
       <FeaturedWork />
-      <Partners />
+
       <Testimonials />
       <Process />
       <TechStack />

@@ -7,41 +7,42 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
       },
       colors: {
         brand: {
-          navy: '#123D7A',
-          'navy-light': '#1E4F9C',
-          teal: '#17B3B0',
-          dark: '#0B1C2D',
-          'dark-lighter': '#0F2438',
-          'dark-section': '#122A42',
+          navy: '#0A1128',
+          blue: '#1E3A8A',
+          teal: '#06B6D4',
+          'teal-dark': '#0F766E',
+          dark: '#050814',
+          'dark-lighter': '#0A1128',
+          'dark-section': '#070C1D',
         },
-        /* Light section backgrounds - alternating */
         surface: {
           light: '#F8FAFC',
           'light-alt': '#F1F5F9',
           'light-muted': '#E2E8F0',
+          glass: 'rgba(10, 17, 40, 0.65)',
+          'glass-light': 'rgba(255, 255, 255, 0.05)',
         },
-        /* Accent palette - use sparingly for icons, highlights, CTAs */
         accent: {
-          teal: '#17B3B0',
-          blue: '#38BDF8',
-          coral: '#FB7185',
-          indigo: '#818CF8',
+          teal: '#06B6D4',
+          blue: '#1E3A8A',
+          cyan: '#22d3ee',
+          glow: '#06B6D4',
         },
-        /* Text on light sections - ensure contrast */
         ink: {
-          primary: '#0F172A',
-          secondary: '#475569',
-          muted: '#64748B',
+          primary: '#F8FAFC',
+          secondary: '#CBD5E1',
+          muted: '#94A3B8',
         },
       },
       backgroundImage: {
-        'gradient-brand': 'linear-gradient(135deg, #123D7A, #17B3B0)',
-        'gradient-mesh': 'radial-gradient(at 40% 20%, rgba(23, 179, 176, 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(18, 61, 122, 0.4) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(23, 179, 176, 0.08) 0px, transparent 50%)',
-        'gradient-blob': 'radial-gradient(ellipse 80% 80% at 50% 50%, var(--blob-color), transparent 70%)',
+        'gradient-brand': 'linear-gradient(135deg, #1E3A8A, #06B6D4)',
+        'gradient-mesh': 'radial-gradient(at 40% 20%, rgba(6, 182, 212, 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(30, 58, 138, 0.4) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(6, 182, 212, 0.08) 0px, transparent 50%)',
+        'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
       },
       boxShadow: {
         'glow-teal': '0 0 40px -10px rgba(23, 179, 176, 0.4)',

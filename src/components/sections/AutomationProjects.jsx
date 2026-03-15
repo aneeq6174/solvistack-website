@@ -1,20 +1,11 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { ScrollReveal } from '../ui/ScrollReveal'
 import { SectionHeading } from '../ui/SectionHeading'
 import { AUTOMATION_PROJECTS } from '../../data/automationProjects'
 import '../../styles/automation.css'
 
 function AutomationCard({ item, index }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-50px' })
   return (
-    <motion.article
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="automation-card"
-    >
+    <article className="automation-card">
       <div className="automation-card-header">
         <div className="automation-card-number">
           {String(index + 1).padStart(2, '0')}
@@ -24,27 +15,29 @@ function AutomationCard({ item, index }) {
           <p className="automation-card-description">{item.description}</p>
         </div>
       </div>
-    </motion.article>
+    </article>
   )
 }
 
 export function AutomationProjects() {
   return (
     <section id="automation-projects" className="automation-section">
-      <div className="container">
-        <div className="automation-header">
-          <span className="automation-badge">Automation Builds</span>
-          <SectionHeading
-            variant="light"
-            title="Flagship Automation Systems"
-            subtitle="Flagship automation systems and intelligent workflows we design and deploy."
-          />
-        </div>
-        <div className="automation-grid">
-          {AUTOMATION_PROJECTS.map((item, i) => (
-            <AutomationCard key={item.title} item={item} index={i} />
-          ))}
-        </div>
+      <div className="container relative z-10">
+        <ScrollReveal stagger={0.1}>
+          <div className="automation-header">
+            <span className="automation-badge">Automation Builds</span>
+            <SectionHeading
+              variant="dark"
+              title="Flagship Automation Systems"
+              subtitle="Flagship automation systems and intelligent workflows we design and deploy."
+            />
+          </div>
+          <div className="automation-grid">
+            {AUTOMATION_PROJECTS.map((item, i) => (
+              <AutomationCard key={item.title} item={item} index={i} />
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )

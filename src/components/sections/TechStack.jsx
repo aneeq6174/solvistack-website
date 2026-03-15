@@ -1,5 +1,4 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { ScrollReveal } from '../ui/ScrollReveal'
 import { SectionHeading } from '../ui/SectionHeading'
 import '../../styles/tech.css'
 
@@ -21,56 +20,43 @@ const TECH_CATEGORIES = [
   },
 ]
 
-function TechItem({ name, index }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-20px' })
+function TechItem({ name }) {
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 12 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.4, delay: index * 0.06 }}
-      className="tech-item"
-    >
-      <div className="tech-item-icon" aria-hidden="true">
-        <span className="text-sm font-semibold">{name.charAt(0)}</span>
+    <div className="tech-item bg-[rgba(10,17,40,0.4)] border border-[rgba(255,255,255,0.05)] text-ink-secondary py-2 px-4 rounded-lg flex items-center gap-3 transition-colors hover:bg-[rgba(6,182,212,0.15)] hover:text-white hover:border-accent-teal">
+      <div className="tech-item-icon bg-transparent" aria-hidden="true">
+        <span className="text-sm font-semibold text-accent-cyan">{name.charAt(0)}</span>
       </div>
-      <span className="tech-item-name">{name}</span>
-    </motion.div>
+      <span className="tech-item-name font-medium">{name}</span>
+    </div>
   )
 }
 
 export function TechStack() {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-60px' })
   return (
-    <section id="tech" ref={ref} className="tech-section">
-      <div className="container">
-        <div className="tech-header">
-          <SectionHeading
-            variant="light"
-            title="Automation & Systems Infrastructure"
-            subtitle="We build on automation-first infrastructure, then scale with proven web and API stacks."
-          />
-        </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="tech-grid"
-        >
-          {TECH_CATEGORIES.map((category, categoryIndex) => (
-            <div key={category.name} className="tech-card">
-              <h3 className="tech-card-title">{category.name}</h3>
-              <p className="tech-card-subtitle">{category.description}</p>
-              <div className="tech-item-list">
-                {category.items.map((name, i) => (
-                  <TechItem key={name} name={name} index={categoryIndex * 3 + i} />
-                ))}
+    <section id="tech" className="tech-section py-24 md:py-32 relative bg-transparent">
+      <div className="container relative z-10 max-w-6xl mx-auto">
+        <ScrollReveal stagger={0.15}>
+          <div className="tech-header text-center mb-16">
+            <SectionHeading
+              variant="dark"
+              title="Automation & Systems Infrastructure"
+              subtitle="We build on automation-first infrastructure, then scale with proven web and API stacks."
+            />
+          </div>
+          <div className="tech-grid grid gap-6 md:grid-cols-3">
+            {TECH_CATEGORIES.map((category) => (
+              <div key={category.name} className="tech-card bg-[rgba(10,17,40,0.65)] backdrop-blur-md rounded-2xl p-8 border border-[rgba(6,182,212,0.15)] shadow-card-light transition-all hover:-translate-y-2 hover:border-accent-teal hover:shadow-glow-teal">
+                <h3 className="tech-card-title text-xl font-display font-semibold text-white mb-2">{category.name}</h3>
+                <p className="tech-card-subtitle text-sm text-ink-secondary mb-6 leading-relaxed bg-transparent">{category.description}</p>
+                <div className="tech-item-list flex flex-col gap-3">
+                  {category.items.map((name) => (
+                    <TechItem key={name} name={name} />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )

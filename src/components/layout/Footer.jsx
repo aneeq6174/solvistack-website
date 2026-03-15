@@ -77,11 +77,6 @@ export function Footer() {
                     </li>
                   )
                 })}
-                <li>
-                  <Link to={ROUTES.PROJECTS} className="footer-link">
-                    Projects
-                  </Link>
-                </li>
               </ul>
             </div>
 
