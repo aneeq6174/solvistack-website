@@ -17,7 +17,7 @@ export function Cta() {
             </p>
 
             <div className="contact-form-actions flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a href="#calendly" className="contact-form-submit inline-flex items-center justify-center gap-3 bg-brand-teal text-brand-navy font-bold text-lg px-8 py-4 rounded-xl shadow-glow-teal-sm transition-transform hover:scale-105">
+              <a href="https://calendly.com/aneeqijaz99/30min" className="contact-form-submit inline-flex items-center justify-center gap-3 bg-brand-teal text-brand-navy font-bold text-lg px-8 py-4 rounded-xl shadow-glow-teal-sm transition-transform hover:scale-105">
                 Book My Free Call
                 <svg fill="none" className="w-5 h-5" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />

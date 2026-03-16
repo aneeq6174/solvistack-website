@@ -72,7 +72,7 @@ function ServiceCard({ item }) {
         </ul>
         <div style={{ flexGrow: 1 }} />
         <a
-          href="#calendly"
+          href="https://calendly.com/aneeqijaz99/30min"
           className="services-card-link"
           aria-label={`Get started with ${item.name}`}
         >
@@ -109,7 +109,7 @@ export function Services() {
 
           <div style={{ marginTop: '3.5rem', textAlign: 'center', fontSize: '1rem' }} className="text-ink-secondary">
             <p style={{ marginBottom: '0.75rem' }}>Not sure which fits your practice?</p>
-            <a href="#calendly" className="services-card-link justify-center text-accent-cyan">
+            <a href="https://calendly.com/aneeqijaz99/30min" className="services-card-link justify-center text-accent-cyan">
               Book a free call — we&apos;ll tell you in 15 minutes
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />

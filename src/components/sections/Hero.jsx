@@ -45,7 +45,7 @@ export function Hero() {
         {/* CTA Buttons */}
         <div className="hero-ctas">
           <a
-            href="#calendly"
+            href="https://calendly.com/aneeqijaz99/30min"
             className="hero-cta hero-cta-primary"
             aria-label="Book a free 15-minute call"
           >

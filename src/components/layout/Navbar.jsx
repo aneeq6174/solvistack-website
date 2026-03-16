@@ -27,7 +27,7 @@ function NavLink({ link, className = '', onNavigate }) {
   if (link.id === 'cta') {
     return (
       <a
-        href="#calendly"
+        href="https://calendly.com/aneeqijaz99/30min"
         className={`nav-link ${className}`.trim()}
         aria-label="Book a free call"
         onClick={onNavigate}
@@ -94,7 +94,7 @@ export function Navbar() {
         {/* RIGHT: CTA button (hidden on mobile) */}
         <div className="nav-right">
           <a
-            href="#calendly"
+            href="https://calendly.com/aneeqijaz99/30min"
             className="nav-cta nav-cta-primary"
             aria-label="Book a free call"
           >
