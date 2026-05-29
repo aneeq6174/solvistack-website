@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { LOGO_ALT, LOGO_SRC } from '../constants/brand'
 
 const CALENDLY_URL = 'https://calendly.com/aneeqijaz99/30min'
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -26,8 +26,14 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Brand */}
-        <a href="#" className="font-display font-bold text-xl text-brand-ink tracking-tight">
-          Solvistack
+        <a href="#" className="flex items-center shrink-0" aria-label={LOGO_ALT}>
+          <img
+            src={LOGO_SRC}
+            alt={LOGO_ALT}
+            className="h-11 w-auto object-contain"
+            width={190}
+            height={44}
+          />
         </a>
 
         {/* Desktop nav links */}

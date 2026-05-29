@@ -16,6 +16,7 @@ export default {
           bg: '#F8F9FA',
           surface: '#FFFFFF',
           blue: '#1A56DB',
+          teal: '#2aacb9',
           'blue-light': '#EFF6FF',
           slate: '#475569',
           ink: '#0F172A',

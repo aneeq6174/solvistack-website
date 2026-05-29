@@ -1,3 +1,5 @@
+import { LOGO_ALT, LOGO_SRC } from '../constants/brand'
+
 const CALENDLY_URL = 'https://calendly.com/aneeqijaz99/30min'
 const LINKEDIN_URL = '{LINKEDIN_URL}'
 
@@ -7,10 +9,14 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Left — Brand */}
-          <div className="text-center md:text-left">
-            <span className="font-display font-bold text-base text-brand-ink block">
-              Solvistack Technologies
-            </span>
+          <div className="flex flex-col items-center md:items-start gap-1.5">
+            <img
+              src={LOGO_SRC}
+              alt={LOGO_ALT}
+              className="h-10 w-auto object-contain"
+              width={170}
+              height={40}
+            />
             <span className="text-xs text-brand-slate">
               Lahore, Pakistan
             </span>
@@ -28,7 +34,7 @@ export default function Footer() {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-slate hover:text-brand-blue transition-colors duration-200"
+              className="text-brand-slate hover:text-brand-teal transition-colors duration-200"
               aria-label="Book a call on Calendly"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -46,7 +52,7 @@ export default function Footer() {
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-slate hover:text-brand-blue transition-colors duration-200"
+              className="text-brand-slate hover:text-brand-teal transition-colors duration-200"
               aria-label="LinkedIn profile"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
