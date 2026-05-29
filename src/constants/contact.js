@@ -6,7 +6,6 @@ export const CONTACT = {
   emailSubject: 'Clinic Automation Inquiry',
   calendly: 'https://calendly.com/aneeqijaz99/30min',
 }
-
 export const FAB_ACTIONS = [
   {
     id: 'automation',
@@ -27,3 +26,4 @@ export const FAB_ACTIONS = [
     icon: 'mail',
   },
 ]
+

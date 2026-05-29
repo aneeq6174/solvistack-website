@@ -1,27 +1,48 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Navbar } from './components/layout/Navbar'
-import { Footer } from './components/layout/Footer'
-import { ScrollProgress } from './components/ui/ScrollProgress'
-import { FloatingButtons } from './components/ui/FloatingButtons'
-import { SmoothScroll } from './components/layout/SmoothScroll'
-import { Scene } from './components/3d/Scene'
-import { HomePage } from './pages/HomePage'
-import { ROUTES } from './constants/sections'
+import { useEffect } from 'react'
+import Lenis from 'lenis'
+import BackgroundAnimation from './components/BackgroundAnimation'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import WhatIBuild from './components/WhatIBuild'
+import CaseStudy from './components/CaseStudy'
+import HowItWorks from './components/HowItWorks'
+import ClosingCTA from './components/ClosingCTA'
+import Footer from './components/Footer'
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      touchMultiplier: 2,
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    return () => lenis.destroy()
+  }, [])
+
   return (
-    <SmoothScroll>
-      <Scene />
-      <BrowserRouter>
-        <ScrollProgress />
+    <>
+      <BackgroundAnimation />
+      <div className="relative z-10">
         <Navbar />
-        <Routes>
-          <Route path={ROUTES.HOME} element={<HomePage />} />
-        </Routes>
+        <main>
+          <Hero />
+          <WhatIBuild />
+          <CaseStudy />
+          <HowItWorks />
+          <ClosingCTA />
+        </main>
         <Footer />
-        <FloatingButtons />
-      </BrowserRouter>
-    </SmoothScroll>
+      </div>
+    </>
   )
 }
 
